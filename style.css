@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #090266;
+    --bg-color: #fff6a8;
+    --accent-color: #b80b02;
+    --border-radius: 12px;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+  }
+
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+
+  #container {
+    display: flex;
+    position: relative;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+  canvas {
+    border: 1px solid #ccc;
+    cursor: crosshair;
+    display: block;
+  }
+
+  #info {
+    font-size: 16px;
+    color: #555;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: white;
+    padding: 6px 12px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+  }
+
+  #drop-zone {
+    border: 2px dashed var(--primary-color);
+    padding: 20px;
+    margin: 20px 0;
+    width: 80%;
+    text-align: center;
+    color: var(--primary-color);
+    background-color: white;
+    border-radius: var(--border-radius);
+    transition: border 0.3s;
+  }
+
+  #drop-zone:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+
+  textarea {
+    width: 80%;
+    height: 30px;
+    margin-top: 15px;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    box-shadow: var(--shadow);
+    resize: vertical;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    z-index: 999;
+  }
+
+  #clear-btn {
+    position: fixed;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #090266;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+  }
+  #clear-btn:hover {
+    background: var(--accent-color);
+  }
+  #copy-btn {
+    position: fixed;
+    bottom: 35px;
+    right: 8%;
+    transform: translateX(-50%);
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+
+  input[type="number"], input[type="file"] {
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+  }
+
+  button {
+    background: var(--primary-color);
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: var(--accent-color);
+  }
+
+  #marker-size {
+    width: 50px;
+    margin-left: 5px;
+  }
+  

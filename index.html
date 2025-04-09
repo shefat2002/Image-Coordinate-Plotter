@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Coordinate Plotter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>🖼️ Image Coordinate Plotter</h2>
+
+  <div id="drop-zone">Drag & Drop Image Here or <input type="file" id="img-input" /></div>
+  <div>
+    Set Width: <input type="number" id="img-width" value="300" style="width: 80px;" /> px
+    Set Height: <input type="number" id="img-height" value="300" style="width: 80px;" /> px
+    Marker Size: <input type="number" id="marker-size" value="4" min="1" max="20" /> px
+    <button onclick="applySize()">Apply</button>
+  </div>
+
+  <div id="container">
+    <div>
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+
+  <div id="info">Mouse: (x, y)</div>
+  <textarea id="coords" placeholder="var(x,y); will appear here..."></textarea>
+  <button id="clear-btn" onclick="clearCoords()">Clear Text Box</button>
+  <button id="copy-btn" onclick="copyCoords()">Copy</button>
+  <script src="script.js"></script>
+</body>
+</html>
